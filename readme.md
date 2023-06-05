@@ -1,4 +1,4 @@
-# Recipe Generator
+Te es readme
 
-### Programmatūras apraksts
-Programma, kas ģenerē izlases recepti, pamatojoties uz lietotāja preferencēm attiecībā uz sastāvdaļām, ēdieniem un diētas ierobežojumiem.
+
+Labs piemērs - pasniedzēja repo [Agriculture-website](https://github.com/wraithking/Agriculture-website)
