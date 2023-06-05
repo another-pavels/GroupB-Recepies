@@ -1,0 +1,128 @@
+.card .card-heading {
+    padding: 15px 20px;
+    position: relative;
+    height: 65px;
+}
+
+.card .card-search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    z-index: 15;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    border: 0;
+    box-shadow: none;
+    width: 100%;
+    display: none;
+    background: #fff;
+}
+
+.card .card-search .form-group {
+    margin: 0;
+    padding: 0;
+    height: 65px;
+}
+
+.card .card-search .search-icon-left {
+    left: 15px;
+    right: auto;
+}
+.card .card-search .close-search, .card .card-search .search-icon-left {
+    top: 50%;
+    margin-top: -15px;
+    line-height: 30px;
+    margin-right: 10px;
+    font-size: 25px;
+    position: absolute;
+    right: 15px;
+    z-index: 99;
+}
+
+.card .card-search .form-control {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: none;
+    box-shadow: none;
+    left: 0;
+    top: 0;
+    margin: 0;
+    font-size: 15px;
+    text-indent: 45px;
+    background-color: #EEF5F9;
+    background-image: none;
+}
+
+.card .card-search .close-search {
+    right: 15px;
+    left: auto;
+}
+ .card .card-search .search-icon-left {
+    top: 50%;
+    margin-top: -15px;
+    line-height: 30px;
+    margin-right: 10px;
+    font-size: 25px;
+    position: absolute;
+    right: 15px;
+    z-index: 99;
+    width: 30px;
+}
+
+.card .card-search.open {
+    display: block;
+}
+
+ul.card-actions.icons.right-top {
+    right: 10px;
+    top: 15px;
+}
+
+.card-heading ul.card-actions.icons {
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.card-actions.icons li {
+    display: inline;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background: unset;
+    background-color: #00bcd4;
+    border-color: #00bcd4;
+    box-shadow: 0 4px 5px 0 rgba(0, 188, 212, 0.14), 0 1px 10px 0 rgba(0, 188, 212, 0.12), 0 2px 4px -1px rgba(0, 188, 212, 0.2);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button,
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: unset;
+    border: 0;
+    border-color: #00bcd4;
+    border-radius: 30px !important;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    padding: 0px 11px;
+    margin: 0 3px;
+    min-width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: #999999!important;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    background: transparent;
+    text-align: center;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    border: 1;
+}

@@ -1,0 +1,76 @@
+.vis-timeline {
+    border: none!important;
+    background: #fff!important;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.vis-item {
+    cursor: pointer;
+    font-size: 11pt!important;
+}
+.vis-item.vis-range {
+    color: white!important;
+    background-color: #ec407a!important;
+    border: none!important;
+    border-radius: 4px!important;
+    box-sizing: border-box!important;
+    box-shadow: 0 14px 26px -12px rgba(236,64,122,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(236,64,122,.2)!important;
+}
+.vis-item.vis-point .vis-dot {
+    border-color: #ec407a!important;
+    box-shadow: 0 14px 26px -12px rgba(66,165,245,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(66,165,245,.2)!important;
+}
+//
+.vis-item.vis-point{
+    background: none!important;
+    box-shadow: none!important;
+}
+
+.vis-item.vis-point .vis-item-content{
+    color: #3C4858!important;
+}
+
+.vis-item,
+.vis-item.vis-line {
+    /* border-width: 3px; */
+}
+
+// .vis-item.vis-dot {
+//     border-width: 10px!important;
+//     border-radius: 10px!important;
+// }
+//
+// .vis-item.vis-selected {
+//     background-color: #42a5f5!important;
+//     box-shadow: 0 14px 26px -12px rgba(66,165,245,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(66,165,245,.2)!important;
+// }
+//
+// .vis-time-axis .vis-text {
+//     padding-top: 10px!important;
+//     padding-left: 10px!important;
+// }
+//
+// .vis-time-axis .vis-text.vis-major {
+//     font-weight: bold!important;
+// }
+//
+// .vis-time-axis .vis-grid.vis-minor {
+//     border-width: 2px!important;
+//     border-color: pink!important;
+// }
+//
+// .vis-time-axis .vis-grid.vis-major {
+//     border-width: 2px!important;
+//     border-color: #F991A3!important;
+// }
+//
+// div.vis-tooltip {
+//     border: none!important;
+//     opacity: 0.8!important;
+//     background-color: #171515!important;
+//     color: #fff!important;
+//     border-radius: 4px!important;
+//     box-shadow: 0 14px 26px -12px rgba(23,21,21,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(23,21,21,.2)!important;
+// }

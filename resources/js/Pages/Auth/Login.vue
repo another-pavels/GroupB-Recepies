@@ -37,58 +37,77 @@ const submit = () => {
             {{ status }}
         </div>
 
-        <form @submit.prevent="submit">
-            <div>
-                <InputLabel for="email" value="Email" />
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
+                <div class="card">
+                    <div class="card-header card-header-primary text-center">
+                        <h4 class="card-title">Pieteikties</h4>
+                    </div>
+                    <div class="card-body">
+                        <form @submit.prevent="submit">
+                            <span class="bmd-form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="material-icons">mail</i>
+                                        </span>
+                                    </div>
+                                    <TextInput
+                                        id="email"
+                                        type="email"
+                                        class="form-control"
+                                        v-model="form.email"
+                                        required
+                                        autofocus
+                                        autocomplete="username"
+                                    />
+                                    <InputError class="mt-2" :message="form.errors.email" />
+                                </div>
+                            </span>
+                            <span class="bmd-form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="material-icons">lock_outline</i>
+                                        </span>
+                                    </div>
+                                    <TextInput
+                                        id="password"
+                                        type="password"
+                                        class="form-control"
+                                        v-model="form.password"
+                                        required
+                                        autocomplete="current-password"
+                                    />
+                                    <InputError class="mt-2" :message="form.errors.password" />
+                                </div>
+                            </span>
+                            <div class="form-group row">
+                                <div class="col-md-6 offset-md-4">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <Checkbox name="remember" class="form-check-input" v-model:checked="form.remember" />
+                                            Atcerēties mani
+                                            <span class="form-check-sign">
+                                                <span class="check"></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
 
-                <TextInput
-                    id="email"
-                    type="email"
-                    class="mt-1 block w-full"
-                    v-model="form.email"
-                    required
-                    autofocus
-                    autocomplete="username"
-                />
+                            <div class="d-flex items-center justify-content-center mt-4">
 
-                <InputError class="mt-2" :message="form.errors.email" />
+                                <PrimaryButton class="btn btn-primary" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                                    Ienākt
+                                </PrimaryButton>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <div class="mt-4">
-                <InputLabel for="password" value="Password" />
-
-                <TextInput
-                    id="password"
-                    type="password"
-                    class="mt-1 block w-full"
-                    v-model="form.password"
-                    required
-                    autocomplete="current-password"
-                />
-
-                <InputError class="mt-2" :message="form.errors.password" />
-            </div>
-
-            <div class="block mt-4">
-                <label class="flex items-center">
-                    <Checkbox name="remember" v-model:checked="form.remember" />
-                    <span class="ml-2 text-sm text-gray-600">Remember me</span>
-                </label>
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <Link
-                    v-if="canResetPassword"
-                    :href="route('password.request')"
-                    class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                    Forgot your password?
-                </Link>
-
-                <PrimaryButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Log in
-                </PrimaryButton>
-            </div>
-        </form>
     </GuestLayout>
 </template>

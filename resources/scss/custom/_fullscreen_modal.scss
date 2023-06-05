@@ -1,0 +1,13 @@
+.modal-fulsceen.modal-dialog {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.modal-fulsceen .modal-content {
+    height: auto;
+    min-height: 100%;
+    border-radius: 0;
+}

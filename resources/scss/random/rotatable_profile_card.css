@@ -1,0 +1,81 @@
+/* ROTATING PROFILE CARD */
+
+.rotating-card-container .card.card-profile .front {
+    margin-top: -80px;
+    padding-top: 90px;
+}
+
+.rotating-card-container .card-profile .card-avatar {
+    z-index: 10;
+}
+
+.container>.raised {
+    margin: -60px 30px 0px;
+    z-index: 1;
+}
+
+/* <div class="col-md-6 col-lg-4">
+    <div class="rotating-card-container manual-flip" style="margin-bottom: 30px;">
+        <div class="card card-rotate card-profile">
+            <div class="card-avatar">
+                <a href="#pablo">
+                    <img class="img" src="{{asset('img/faces/marc.jpg')}}">
+                </a>
+            </div>
+
+            <div class="front" style="width: 349.984px;">
+                <div class="card-body">
+                    <h6 class="card-category text-gray">CEO / Co-Founder</h6>
+                    <h4 class="card-title">Alec Thompson</h4>
+                    <p class="card-description">
+                        Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <div class="author">
+
+                        <a type="button" name="button" href="javascript:void(0)" class="btn-rotate">
+                            <i class="material-icons">refresh</i> Rotate
+                        </a>
+                        {{-- <a href="#pablo">
+                        <i class="material-icons">refresh</i>
+                    </a> --}}
+                </div>
+                <div class="stats ml-auto">
+                    <i class="material-icons">favorite</i> 2.4K ·
+                    <i class="material-icons">share</i> 45
+                </div>
+            </div>
+            </div>
+            <div class="back" style="width: 349.984px;">
+                <div class="card-body">
+                    <br>
+                    <h5 class="card-title">
+                        Do more...
+                    </h5>
+                    <p class="card-description">
+                        You can read this article or share it with your friends and family on different networks...
+                    </p>
+                    <div class="stats text-center">
+                        <a href="#pablo" class="btn btn-rose btn-round">
+                            <i class="material-icons">subject</i> Read
+                        </a>
+                        <a href="#pablo" class="btn btn-just-icon btn-round btn-twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#pablo" class="btn btn-just-icon btn-round btn-dribbble">
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                        <a href="#pablo" class="btn btn-just-icon btn-round btn-facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </div>
+                    <br>
+                    <button type="button" name="button" class="btn btn-link btn-round btn-rotate">
+                        <i class="material-icons">refresh</i> Back...
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> */
