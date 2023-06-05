@@ -11,6 +11,5 @@ Programma, kas ģenerē recepti pēc nejaušības principa, pamatojoties uz liet
 
 ## Uzstādīšana un izmantošana
 
-1. Klonējiet repozitoriju uz savu datoru:
-
-git clone git@github.com:another-pavels/GroupB-Recepies.git
+1. Klonējiet repozitoriju uz savu datoru: `git clone git@github.com:another-pavels/GroupB-Recepies.git`
+2. Atveram lapas pārlūkā https://
