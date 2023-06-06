@@ -8,5 +8,5 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 sudo apt update && \
 apt-cache policy docker-ce && \
 sudo apt install docker-ce docker-compose net-tools ansible -y
-#curl -s -o /opt/webserver-compose https://raw.githubusercontent.com/....
+curl -s -o /opt/ansible-batch.yml https://raw.githubusercontent.com/another-pavels/GroupB-Recepies/infra/ansible-batch.yml
 #docker-compose -f /opt/webserver-compose up -d
