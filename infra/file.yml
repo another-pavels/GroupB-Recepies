@@ -1,0 +1,10 @@
+---
+  - name: Playbook
+    hosts: localhost
+    become: yes
+    become_user: root
+    tasks:
+      - name: create an empty file if it doesn't exist
+        file:
+          path: $HOME/test_file
+          state: touch
