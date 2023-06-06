@@ -6,5 +6,5 @@
     tasks:
       - name: create an empty file if it doesn't exist
         file:
-          path: $HOME/test_file
+          path: /opt/test_file
           state: touch
