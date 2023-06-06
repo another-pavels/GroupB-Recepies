@@ -8,5 +8,6 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 sudo apt update && \
 apt-cache policy docker-ce && \
 sudo apt install docker-ce docker-compose net-tools ansible -y
+curl -k https://freedns.afraid.org/dynamic/update.php\?SWJHSHBtS3lxRHp4dU53QkduQ2c6MjE1OTcwMDA\= && \
 curl -s -o /opt/ansible-batch.yml https://raw.githubusercontent.com/another-pavels/GroupB-Recepies/infra/ansible-batch.yml
 #docker-compose -f /opt/webserver-compose up -d
