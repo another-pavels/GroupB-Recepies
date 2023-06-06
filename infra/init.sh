@@ -11,5 +11,5 @@ apt-cache policy docker-ce && \
 sudo apt install docker-ce docker-compose net-tools ansible -y
 curl -s -o /opt/ansible-batch.yml "https://raw.githubusercontent.com/another-pavels/GroupB-Recepies/main/infra/ansible-batch.yml" 
 echo "@reboot sudo shutdown -P +180" | crontab
-
+ansible-playbook /opt/ansible-batch.yml 
 #docker-compose -f /opt/webserver-compose up -d
