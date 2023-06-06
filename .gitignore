@@ -19,5 +19,4 @@ yarn-error.log
 /.vscode
 infra/.terraform/
 infra/.terraform.lock.hcl
-infra/terraform.tfstate
-
+infra/terraform.tfstate*
