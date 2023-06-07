@@ -8,3 +8,7 @@
         file:
           path: /opt/test_file
           state: touch
+      - name: Set correct timezone
+        timezone:
+          name=Europe/Riga
+
