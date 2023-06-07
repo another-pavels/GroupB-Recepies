@@ -28,4 +28,5 @@ sudo apt install docker-ce docker-compose net-tools ansible -y
 curl -s -o /opt/ansible-batch.yml "https://raw.githubusercontent.com/another-pavels/GroupB-Recepies/main/infra/ansible-batch.yml" && \
 /usr/bin/ansible-playbook /opt/ansible-batch.yml 
 
+git clone https://github.com/another-pavels/GroupB-Recepies.git /var/www/html         
 #docker-compose -f /opt/webserver-compose up -d
