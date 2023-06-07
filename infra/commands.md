@@ -14,3 +14,14 @@ execute php scripts like:`sail php -v`
 Composer commands:`sail composer require laravel/sanctum`
 
 publish dockerfiles `sail artisan sail:publish` (publish "docker" folder inside project)
+
+
+```
+cd /var/www/html && 
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php82-composer:latest \
+    composer install --ignore-platform-reqs
+```
