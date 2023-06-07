@@ -9,13 +9,13 @@
             <div class="card-body">
                 <h3 class="card-title">Recepšu ģenerātors</h3>
                 <div class="form-group">
-                    <label for="title">Angļu valodā ieraksti sastāvdaļas, ko vēlies izmantot, atdalot tās ar komatu</label>
+                    <label>Angļu valodā ieraksti sastāvdaļas, ko vēlies izmantot, atdalot tās ar komatu</label>
                     <input type="text" class="form-control" v-model="ingredients" placeholder="Piemēram: Peas, pineaple, black pepper, mayonnaise" autofocus>
                 </div>
                 <div class="form-group">
-                    <label for="title">Izvēlies virtuvi</label>
+                    <label>Izvēlies virtuvi</label>
                     <select class="form-control" v-model="cuisine">
-                        <option value="">Jebkura</option>
+                        <option value="any">Jebkura</option>
                         <option value="American">Amerikāņu</option>
                         <option value="British">Britu</option>
                         <option value="Chinese">Ķīniešu</option>
@@ -33,7 +33,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="title">Izvēlies produktus, kurus nevari lietot (arī angliski)</label>
+                    <label>Izvēlies produktus, kurus nevari lietot (arī angliski)</label>
                     <input type="text" class="form-control" v-model="dietaryRestrictions" placeholder="Piemēram: Dairy, lactose, nuts, raspberry" autofocus>
                 </div>
             </div>
@@ -55,7 +55,7 @@ import { Head } from '@inertiajs/vue3';
         },
         data: () => ({
             ingredients: '',
-            cuisine: '',
+            cuisine: 'any',
             dietaryRestrictions: '',
         }),
         computed: {
