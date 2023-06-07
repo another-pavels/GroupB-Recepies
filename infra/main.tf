@@ -50,6 +50,12 @@ resource "aws_security_group" "GroupB_Recepies_secgroup_web" {
     protocol    = "tcp" 
     cidr_blocks = ["0.0.0.0/0"]
   } 
+  ingress {
+    from_port   = 2234
+    to_port     = 2234
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
   ingress { 
     from_port   = 80 
     to_port     = 80 
