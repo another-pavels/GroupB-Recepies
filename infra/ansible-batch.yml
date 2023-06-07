@@ -28,22 +28,23 @@
           - httping
           - ncdu
           - glances
+          - fail2ban
 
-      - name: Install laravel related 
-        apt:
-          state: present
-          update_cache: yes
-          name: "{{ packages }}"
-        vars:
-          packages:
-          - nginx
-          - mysql-server
-          - php8.1-fpm 
-          - php-mysql
-          - php-mbstring 
-          - php-xml 
-          - php-bcmath 
-          - php-curl
+      # - name: Install laravel related 
+      #   apt:
+      #     state: present
+      #     update_cache: yes
+      #     name: "{{ packages }}"
+      #   vars:
+      #     packages:
+      #     - nginx
+      #     - mysql-server
+      #     - php8.1-fpm 
+      #     - php-mysql
+      #     - php-mbstring 
+      #     - php-xml 
+      #     - php-bcmath 
+      #     - php-curl
 
       - name: Set correct timezone
         timezone:

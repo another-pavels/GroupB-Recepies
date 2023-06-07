@@ -44,12 +44,6 @@ resource "aws_default_route_table" "GroupB_Recepies_route_table" {
 resource "aws_security_group" "GroupB_Recepies_secgroup_web" { 
   description = "Pavels M WEB Security Group" 
   vpc_id = aws_vpc.GroupB_Recepies_vpc.id 
-  ingress { 
-    from_port   = 22 
-    to_port     = 22 
-    protocol    = "tcp" 
-    cidr_blocks = ["0.0.0.0/0"]
-  } 
   ingress {
     from_port   = 2234
     to_port     = 2234
