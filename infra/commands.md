@@ -25,3 +25,5 @@ docker run --rm \
     laravelsail/php82-composer:latest \
     composer install --ignore-platform-reqs
 ```
+
+`php artisan sail:install`
