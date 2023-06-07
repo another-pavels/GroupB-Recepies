@@ -6,7 +6,6 @@
 /storage/*.key
 /vendor
 .env
-.env.backup
 .env.production
 .phpunit.result.cache
 Homestead.json
@@ -17,3 +16,7 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+infra/.terraform/
+infra/.terraform.lock.hcl
+infra/terraform.tfstate*
+infra/.terraform.tfstate*

@@ -1,0 +1,52 @@
+---
+  - name: Playbook
+    hosts: localhost
+    become: yes
+    become_user: root
+    tasks:
+
+      - name: Install a list of usefull packages
+        apt:
+          state: present
+          update_cache: yes
+          name: "{{ packages }}"
+        vars:
+          packages:
+          - git-core
+          - vim
+          - zsh
+          - mc
+          - htop
+          - iotop
+          - iftop 
+          - unzip
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+          - pwgen
+          - httping
+          - ncdu
+          - glances
+          - fail2ban
+
+      # - name: Install laravel related 
+      #   apt:
+      #     state: present
+      #     update_cache: yes
+      #     name: "{{ packages }}"
+      #   vars:
+      #     packages:
+      #     - composer
+      #     - mysql-server
+      #     - php8.1-fpm 
+      #     - php-mysql
+      #     - php-mbstring 
+      #     - php-xml 
+      #     - php-bcmath 
+      #     - php-curl
+
+      - name: Set correct timezone
+        timezone:
+          name=Europe/Riga
+
