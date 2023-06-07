@@ -30,14 +30,14 @@
           - glances
           - fail2ban
 
-      - name: Install laravel related 
-        apt:
-          state: present
-          update_cache: yes
-          name: "{{ packages }}"
-        vars:
-          packages:
-          - composer
+      # - name: Install laravel related 
+      #   apt:
+      #     state: present
+      #     update_cache: yes
+      #     name: "{{ packages }}"
+      #   vars:
+      #     packages:
+      #     - composer
       #     - mysql-server
       #     - php8.1-fpm 
       #     - php-mysql
