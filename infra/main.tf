@@ -82,7 +82,7 @@ resource "aws_instance" "GroupB_Recepies_WEB" {
   subnet_id     = aws_subnet.GroupB_Recepies_web_subnet.id
   associate_public_ip_address = true
   key_name  = "pavelsJG-amazon-key"
-  user_data = "${file("init.sh")}"
+  user_data = "${file("cloud-init.sh")}"
   vpc_security_group_ids = [ 
   aws_security_group.GroupB_Recepies_secgroup_web.id, 
   ]
