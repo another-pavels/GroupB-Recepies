@@ -1,6 +1,6 @@
 (reverseHTTP) {
   reverse_proxy {
-    to http://1:{args.0}
+    to http://127.0.0.1:{args.0}
     header_up X-Real-IP {remote}
   }
 }
