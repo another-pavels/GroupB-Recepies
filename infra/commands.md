@@ -2,7 +2,7 @@
 ## CLI tools 
 
 
-|  |  |
+|  | Install instructions  |
 | ------ | ------ |
 | **AWS** | https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html |
 | **Terraform** | https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli |
