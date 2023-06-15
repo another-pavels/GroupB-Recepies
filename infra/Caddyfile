@@ -1,0 +1,54 @@
+(reverseHTTP) {
+  reverse_proxy {
+    to http://127.0.0.1:{args.0}
+    header_up X-Real-IP {remote}
+  }
+}
+
+(reverseHTTPS) {
+  reverse_proxy {
+    to https://127.0.0.1:{args.0}
+    transport http {
+      tls_insecure_verify
+    }
+    header_up X-Real-IP {remote}
+  }
+}
+
+(LOGsnippet) {
+  # access log
+  log {
+    output file /var/log/caddy/{args.0}_access.log {
+      roll_size 25MiB
+      roll_keep 5
+      roll_keep_for 720h
+    }
+    format console
+    level INFO
+  }
+  
+  # error log
+  log {
+    output file /var/log/caddy/{args.0}_error.log {
+      roll_size 10MiB
+      roll_keep 5
+      roll_keep_for 720h
+    }
+    format console
+    level ERROR
+  }
+}
+
+(baseHeaders) {
+  header {
+    Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Access-Control-Allow-Origin *
+    -Server
+  }
+}
+
+<domain> {
+  import reverseHTTP <port>
+  import baseHeaders
+  import LOGsnippet <domain>
+}

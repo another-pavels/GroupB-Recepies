@@ -1,9 +1,6 @@
 #!/bin/bash
 set -e 
 
-#Get FQDN:recepies.mooo.com 
-curl -k https://freedns.afraid.org/dynamic/update.php\?SWJHSHBtS3lxRHp4dU53QkduQ2c6MjE1OTcwMDA\= 
-
 #Deploy ssh on non-standart port
 echo "Port 2234" >> /etc/ssh/sshd_config
 service sshd restart
