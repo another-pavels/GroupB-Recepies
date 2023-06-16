@@ -9,7 +9,9 @@ service sshd restart
 echo "0 0 * * * sudo shutdown now" |crontab -
 
 #Background tasks from cron
-echo "* * * * * /usr/bin/php /var/www/html/artisan queue:work" |crontab -
+echo "* * * * * /usr/bin/php /var/www/html/artisan queue:work --timeout=30" |crontab -
+echo "1,6,11,16,21,26,31,36,41,46,51,56 * * * * sleep 24 ; wget --no-check-certificate -O - https://freedns.afraid.org/dynamic/update.php?YjRoc0NrTnU1b3UzWVhTWUtveTg6MjE2MjQ1MTM= >> /tmp/freedns_recipes_us_to.log 2>&1 &"
+wget --no-check-certificate -O - https://freedns.afraid.org/dynamic/update.php?YjRoc0NrTnU1b3UzWVhTWUtveTg6MjE2MjQ1MTM=
 
 echo "# apt update && sudo apt upgrade -y"
 apt update && sudo apt upgrade -y
@@ -97,5 +99,30 @@ echo "# Finish state:"$?
 #Set php default version
 update-alternatives --set php /usr/bin/php8.1
 
+systemctl restart mysql && \
+DBNAME=recepies_db ; DBUSER=recepies_user ; DBPASS=recepies_pass;
+echo "CREATE DATABASE $DBNAME" | sudo mysql && 
+echo "GRANT ALL PRIVILEGES ON $DBNAME.* to '$DBUSER'@'localhost' identified by '$DBPASS'" | sudo mysql
 
+FQDN="recepies.us.to"
+cd /var/www/html/
+cp .env.example .env
+    sed -i "s|^APP_URL=http://FQDN-template|APP_URL=https://$FQDN|g" .env
+    sed -i 's|^DB_DATABASE=laravel|DB_DATABASE=recepies_db|g' .env
+    sed -i 's|^DB_USERNAME=.*|DB_USERNAME=recepies_user|g' .env
+    sed -i 's|^DB_PASSWORD=.*|DB_PASSWORD=recepies_pass|g' .env
+    chown ubuntu .env
+
+echo "composer..."
+su ubuntu -c "whoami && \
+	cd /var/www/html/ && \
+	composer install && \
+	php artisan key:generate && \
+	sudo npm install -g npm@9.7.1 && \
+	npm install && \
+	npm run build && \
+	php artisan migrate --force"
+cp /var/www/html/infra/Caddyfile /etc/caddy/Caddyfile
+sed -i "s|^FQDN-template|$FQDN|g" /etc/caddy/Caddyfile
+systemctl restart caddy
 
