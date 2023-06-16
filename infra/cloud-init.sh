@@ -94,6 +94,7 @@ sudo apt install -y \
     php8.1-gd 
 echo "# Finish state:"$?
 
+#Set php default version
 update-alternatives --set php /usr/bin/php8.1
 
 
