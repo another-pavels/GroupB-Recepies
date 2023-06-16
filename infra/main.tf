@@ -23,7 +23,7 @@ provider "aws" {
 
 # Amazon Virtual Private Cloud (VPC) definition
 resource "aws_vpc" "GroupB_Recipes_vpc" {
-##  cidr_block = "10.0.0.0/16"
+  cidr_block = "10.0.0.0/16"
 }
 
 # Subnet definition in VPC
@@ -91,7 +91,7 @@ resource "aws_security_group" "GroupB_Recipes_secgroup_web" {
 # ec2 instance definition 
 resource "aws_instance" "GroupB_Recipes_WEB" {
   ami           = "ami-007855ac798b5175e" 
-  instance_type = "t2.micro"
+  instance_type = "t2.small"
   subnet_id     = aws_subnet.GroupB_Recipes_web_subnet.id
   associate_public_ip_address = true
   key_name  = "pavelsJG-amazon-key"

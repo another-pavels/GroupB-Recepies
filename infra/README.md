@@ -65,7 +65,7 @@ Prepare **.env** file (domain,database,openid key etc.)
 ```sh
 cd /var/www/html/
 cp .env.example .env
-    sed -i 's|^APP_URL=http://localhost|APP_URL=https://recepies.mooo.com|g' .env
+    sed -i 's|^APP_URL=http://localhost|APP_URL=https://recipes.us.to|g' .env
     sed -i 's|^DB_DATABASE=laravel|DB_DATABASE=recepies_db|g' .env
     sed -i 's|^DB_USERNAME=.*|DB_USERNAME=recepies_user|g' .env
     sed -i 's|^DB_PASSWORD=.*|DB_PASSWORD=recepies_pass|g' .env
@@ -74,6 +74,7 @@ cp .env.example .env
 ```
 Install laravel dependencies
 ```sh
+cd /var/www/html/
 composer install
 php artisan key:generate
 sudo npm install -g npm@9.7.1
