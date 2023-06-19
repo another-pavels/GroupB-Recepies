@@ -2,6 +2,9 @@
 ### Apraksts
 Programma, kas ģenerē recepti pēc nejaušības principa, pamatojoties uz lietotāja preferencēm, attiecībā uz sastāvdaļām, ēdieniem un diētas ierobežojumiem.
 
+
+## [DEMO](https://recipes.us.to/)
+
 ## Sistēmas parasības
 
 Sistēma ir izstrādāta, izmantojot [Laravel 10 Framework](https://laravel.com/docs/10.x)
