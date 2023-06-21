@@ -7,7 +7,7 @@ on:
 
 jobs:
   checkdir:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Check root directory
-        run: ls -la /
+        run: ls -la /opt
