@@ -4,9 +4,21 @@ on:
   push:
     branches:
       - main
-
+    types:
+      - completed
 jobs:
-  checkdir:
+  update:
+    runs-on: self-hosted
+    steps: 
+      - name: update project
+        run: |
+          cd /var/www/html/
+          git pull
+          composer update
+          npm install
+          npm run build
+          php artisan migrate
+  running_test:
     runs-on: self-hosted
     steps:
       - name: Run tests against project 
