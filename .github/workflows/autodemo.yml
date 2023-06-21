@@ -20,6 +20,7 @@ jobs:
           npm install
           npm run build
           php artisan migrate --force
+    timeout-minutes: 2
   running_test:
     needs: [update]
     runs-on: self-hosted
@@ -28,3 +29,4 @@ jobs:
         run: |
           cd /var/www/html
           /usr/bin/php /var/www/html/artisan test
+    timeout-minutes: 2
