@@ -1,0 +1,13 @@
+name: Automatic workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  checkdir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check root directory
+        run: ls -la /
