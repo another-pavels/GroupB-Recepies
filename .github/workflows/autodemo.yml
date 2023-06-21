@@ -14,6 +14,7 @@ jobs:
       - name: update project
         run: |
           cd /var/www/html/
+          git reset --hard origin/main
           git pull
           composer update
           npm install
