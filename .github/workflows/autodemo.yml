@@ -9,6 +9,7 @@ jobs:
   checkdir:
     runs-on: self-hosted
     steps:
-      - name: Check root directory
+      - name: Run tests against project 
         run: |
+          cd /var/www/html
           /usr/bin/php /var/www/html/artisan test
