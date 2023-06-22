@@ -14,6 +14,6 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/');
 
-        $response->assertContains($response->getStatusCode(), array(200,302));
+        $response->assertStatus(302);
     }
 }
