@@ -18,16 +18,16 @@ Sistēma ir izstrādāta, izmantojot [Laravel 10 Framework](https://laravel.com/
   - PDO
   - tokenizer
   - xml
-- [Composer](https://getcomposer.org/) - A Dependency Manager for PHP 
-- NodeJS (npm package manager)
-- MySQL/MariaDB (iespējams, darbojas arī uz SQL Server, SQLite un PostgreSQL)
+- [Composer](https://getcomposer.org/)
+- NodeJS & npm package manager
+- DB: platforma primāri būvēta ar MySQL/MariaDB atbalstu (iespējams, darbojas arī uz SQL Server, SQLite un PostgreSQL)
 - [OpenAI](https://openai.com/blog/openai-api) API atslēga
 
 ## Uzstādīšana uz lokālās mašīnas
 
 Vienkāršākais veids uzstādīšanai uz lokālās mašīnas ir ar Laravel Sail... pie nosacījuma, ka Tev ir uzstādīts Docker un WSL (ja lieto Windows 10/11).
-- Klonē šo repozitoriju
-- Ieej aplikācijas root direktorijā un izveido sistēmas konfigurācijas datni: `cp .env.example .env`
+- Klonē (vai lejupielādē) šo repozitoriju
+- Ieej aplikācijas *root* direktorijā un izveido sistēmas konfigurācijas datni: `cp .env.example .env`
 - `composer install`
 - `npm install` 
 - `npm run dev`
@@ -37,12 +37,12 @@ Vienkāršākais veids uzstādīšanai uz lokālās mašīnas ir ar Laravel Sail
 
 ## Manuālā uzstādīšana produkcijā
 
-- Klonē šo repozitoriju
-- Ieej aplikācijas root direktorijā un izveido sistēmas konfigurācijas datni `cp .env.example .env`
+- Klonē (vai lejupielādē) šo repozitoriju
+- Ieej aplikācijas *root* direktorijā un izveido sistēmas konfigurācijas datni `cp .env.example .env`
 -  `composer update`
 -  `npm install`
 -  `npm run build`
-- Iestatīt šādus parametrus .env datnē:
+- Iestati šādus parametrus .env datnē:
 ```
 ...
 debug = false
@@ -55,6 +55,6 @@ OpenAI iestatījumi
 ```
 -  `php artisan key:generate`
 -  `php artisan migrate`
-- Iestatīt fona darbu apstrādi ar [Cron vai Supervisor](https://laravel.com/docs/10.x/queues#supervisor-configuration)
+- Iestati fona darbu apstrādi ar [Cron vai Supervisor](https://laravel.com/docs/10.x/queues#supervisor-configuration)
 
 Lieto atbildīgi!
